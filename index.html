@@ -59,11 +59,28 @@
     font-weight: 500; /* Un peu plus épais pour le style street */
 }
 
-      /* Exemple pour personnaliser le badge "Offre limitée" en Orange vif */
-.custom-offre {
-  background-color: #ff5722 !important; /* Ta couleur de fond */
-  color: #ffffff !important;           /* Ta couleur de texte */
-  border: 1px solid #e64a19 !important; /* Ta bordure */
+      /* Jaune Néon (Streetwear) */
+.badge-neon-yellow {
+    background-color: #CCFF00 !important;
+    color: #000 !important;
+    border: none;
+    font-weight: 700;
+}
+
+/* Vert Électrique */
+.badge-neon-green {
+    background-color: #39FF14 !important;
+    color: #000 !important;
+    border: none;
+    font-weight: 700;
+}
+
+/* Style "Ghost" (Contour uniquement) pour varier */
+.badge-outline-neon {
+    background-color: transparent !important;
+    color: #CCFF00 !important;
+    border: 1px solid #CCFF00 !important;
+    font-weight: 600;
 }
     </style>
   </head>
@@ -115,9 +132,9 @@
 
 
          <div class="d-flex flex-wrap gap-2 mt-4">
-              <span class="badge custom-offre">Stock : 2 000 pièces</span>
-              <span class="badge custom-offre">Livraison 48h</span>
-              <span class="badge custom-offre">Offre limitée</span>
+              <span class="badge badge-neon-green rounded-pill px-3 py-2">Stock : 2 000 pièces</span>
+              <span class="badge badge-outline-neon rounded-pill px-3 py-2">Livraison 48h</span>
+              <span class="badge badge-neon-yellow rounded-pill px-3 py-2">Offre limitée</span>
             </div>
           </div>
 
