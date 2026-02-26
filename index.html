@@ -82,19 +82,20 @@
     border: 1px solid #CCFF00 !important;
     font-weight: 600;
 }
-      <style>
+     
+
   .hero {
-    min-height: 75vh;
-    /* L'IMAGE PINTEREST */
-    background-image: url('https://i.pinimg.com/736x/9f/d8/d3/9fd8d3719f589ae905a2b70b1ed8b195.jpg');
-    background-size: cover;
-    background-position: center;
+    min-height: 80vh;
+    /* On force l'image avec !important pour gagner sur le style par défaut */
+    background-image: url('https://i.pinimg.com/736x/9f/d8/d3/9fd8d3719f589ae905a2b70b1ed8b195.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     position: relative;
-    overflow: hidden;
-    color: white;
+    z-index: 1;
   }
 
-  /* CE BLOC CRÉE LE VOILE SOMBRE POUR RENDRE LE TEXTE LISIBLE */
+  /* Ce bloc est INDISPENSABLE pour voir le texte */
   .hero::before {
     content: "";
     position: absolute;
@@ -102,12 +103,18 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Noir à 60% */
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.6); /* Voile noir */
+    z-index: -1; /* Il se place derrière le texte mais devant l'image */
   }
-  
-  /* Garde tes autres styles (.badge-soft, .glass, etc.) en dessous */
-</style>
+
+  /* Garde tes autres styles en dessous */
+  .badge-soft {
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.18);
+    color: #fff;
+  }
+  /* ... le reste de ton style ... */
+
     </style>
   </head>
 
